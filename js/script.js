@@ -92,12 +92,10 @@
     totalRows = data.length;
     data = data.map(function (proposal) {
       proposal.summary =
-          proposal["topicsummarywhatelsedoyouwanttotellusaboutthetalk"] ||
-          proposal["summary"];
+          proposal["topicsummarywhatelsedoyouwanttotellusaboutthetalk"];
       proposal.extra =
-          proposal["whatelsedoyouwanttotellusaboutthetalk"] ||
-          proposal["whatelsedoyouwanttotellusaboutthetalk"];
-      proposal.topicofpresentation = proposal["yourtalkdescription"] || proposal.topic;
+          proposal["yourtalkdescription"];
+      proposal.topicofpresentation = proposal["topicsummarywhatelsedoyouwanttotellusaboutthetalk"];
       proposal.sheetRowNumber = proposal.rowNumber + 1;
       return proposal;
     })
