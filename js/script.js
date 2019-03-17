@@ -89,6 +89,7 @@
 
   var totalRows; // ugh global!
   function showInfo(data) {
+    console.log("data", data");
     totalRows = data.length;
     data = data.map(function (proposal) {
       proposal.summary =
