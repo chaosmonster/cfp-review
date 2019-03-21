@@ -95,7 +95,7 @@
           proposal["yourtalkdescription"];
       proposal.extra =
           proposal["whatelsedoyouwanttotellusaboutthetalk"];
-      proposal.topicofpresentation = proposal["topicsummarywhatelsedoyouwanttotellusaboutthetalk"];
+      proposal.topicofpresentation = proposal["topicsummarywhatelsedoyouwanttotellusaboutthetalk"] || proposal["topic"];
       proposal.sheetRowNumber = proposal.rowNumber + 1;
       return proposal;
     })
